@@ -29,13 +29,15 @@ antidote bundle < ~/.zsh_plugins.txt
 # aliases
 alias c="clear"
 alias ssologin="unsetprofile && aws sso login --profile default"
-alias pull="git pull"
-alias push="git push"
+#alias pull="git pull"
+#alias push="git push"
 alias myip="dig +short -4 myip.opendns.com @resolver1.opendns.com"
 alias python="python3"
 alias pip="pip3"
-alias tfplf="tfp -lock=false"
-alias tflockgen="terraform providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64 -platform=darwin_arm64"
+alias tfi="terraform init"
+alias tfpv='terraform plan -lock=false -var-file=environment.tfvars'
+alias tfp="terraform plan -lock=false"
+alias tflock="terraform providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64 -platform=darwin_arm64"
 
 # functions
 function listprofiles(){
