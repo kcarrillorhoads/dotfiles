@@ -3,8 +3,8 @@
 	pager    = less -F
 
 [user]
-    email    = jreslock@users.noreply.github.com
-    name     = Jason Reslock
+    email    = krhoads@users.noreply.github.com
+    name     = Kevin Carrillo-Rhoads
 
 [color]
     ui       = auto
