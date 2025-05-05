@@ -38,6 +38,10 @@ alias tfi="terraform init"
 alias tfpv='terraform plan -lock=false -var-file=environment.tfvars'
 alias tfp="terraform plan -lock=false"
 alias tflock="terraform providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64 -platform=darwin_arm64"
+alias toi="tofu init"
+alias top="tofu plan -lock=false"
+alias topv="tofu plan -lock=false -var-file=environment.tfvars"
+alias tolock="tofu providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64 -platform=darwin_arm64"
 
 # functions
 function listprofiles(){
