@@ -34,15 +34,15 @@ alias ssologin="unsetprofile && aws sso login --profile default"
 alias myip="dig +short -4 myip.opendns.com @resolver1.opendns.com"
 alias python="python3"
 alias pip="pip3"
-alias tfi="terraform init"
-alias tfpv='terraform plan -lock=false -var-file=environment.tfvars'
-alias tfp="terraform plan -lock=false"
-alias tflock="terraform providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64 -platform=darwin_arm64"
-alias toi="tofu init"
-alias top="tofu plan -lock=false"
-alias topv="tofu plan -lock=false -var-file=environment.tfvars"
-alias tolock="tofu providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64 -platform=darwin_arm64"
-alias todirlock='for dir in */; do if [ -d "$dir" ]; then echo "Processing $dir"; cd "$dir" && rm -rf .terraform && tofu init -upgrade && tolock && cd .. ; fi; done'
+alias tfi="tofu init"
+alias tfpv='tofu plan -lock=false -var-file=environment.tfvars'
+alias tfp="tofu plan -lock=false"
+alias tflock="tofu providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64 -platform=darwin_arm64"
+#alias toi="tofu init"
+#alias top="tofu plan -lock=false"
+#alias topv="tofu plan -lock=false -var-file=environment.tfvars"
+#alias tolock="tofu providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64 -platform=darwin_arm64"
+alias tfdirlock='for dir in */; do if [ -d "$dir" ]; then echo "Processing $dir"; cd "$dir" && rm -rf .terraform && tofu init -upgrade && tolock && cd .. ; fi; done'
 
 ## Logging into the OM1 ECR
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 888025091877.dkr.ecr.us-east-1.amazonaws.com
