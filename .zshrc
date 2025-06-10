@@ -42,7 +42,7 @@ alias tflock="tofu providers lock -platform=windows_amd64 -platform=darwin_amd64
 #alias top="tofu plan -lock=false"
 #alias topv="tofu plan -lock=false -var-file=environment.tfvars"
 #alias tolock="tofu providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64 -platform=darwin_arm64"
-alias tfdirlock='for dir in */; do if [ -d "$dir" ]; then echo "Processing $dir"; cd "$dir" && rm -rf .terraform && tofu init -upgrade && tolock && cd .. ; fi; done'
+alias tfdirlock='for dir in */; do if [ -d "$dir" ]; then echo "Processing $dir"; cd "$dir" && rm -rf .terraform && tofu init -upgrade && tflock && cd .. ; fi; done'
 
 ## Logging into the OM1 ECR
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 888025091877.dkr.ecr.us-east-1.amazonaws.com
